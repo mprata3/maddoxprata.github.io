@@ -1,3 +1,10 @@
+// Switch from Welcome page to Tree page
+function showTree() {
+  document.getElementById("welcome-page").style.display = "none";
+  document.getElementById("tree-page").style.display = "block";
+}
+
+// Open popups for each ornament
 function openPopup(section) {
   document.getElementById("popup").style.display = "block";
 
@@ -7,31 +14,31 @@ function openPopup(section) {
     content = `
       <h2>About Me</h2>
       <ul>
-        <li>I am Maddox Prata, I'm a high school student with a strong interest in academics and personal growth.</li>
-        <li>I enjoy challenging myself through coursework, extracurricular activities, and independent learning.</li>
-        <li>I take parts in clubs such as: Green Team, Riley's Way, Track and Field, and Tennis.</li>
-      </ul>
-    `;
-  }
-
-  if (section === "welcome") {
-    content = `
-      <h2>Welcome</h2>
-      <ul>
-        <li>This website presents my interests, goals, and experiences in a creative and professional format.</li>
-        <li>Each section highlights a different aspect of my academic and personal development.</li>
-        <li>The design reflects both structure and creativity.</li>
+        <li>I enjoy Plants (Green Team)</li>
+        <li>Community Service: Riley’s Way, local churches, food pantry, soup kitchen</li>
+        <li>My goal: get into a good college and have a bright future</li>
+        <li>Hobbies: Tennis, walking, running, biking</li>
+        <li>Other: personal growth, academics, and leadership</li>
       </ul>
     `;
   }
 
   if (section === "education") {
     content = `
-      <h2>Education</h2>
+      <h2>Education & Experience</h2>
       <ul>
-        <li>The Browning School — Current student</li>
-        <li>Simon Baruch Middle School 104</li>
-        <li>PS 340</li>
+        <li>The Browning School (Current)</li>
+        <li>Simon Baruch MS 104</li>
+        <li>PS 340 (Elementary)</li>
+        <li>Relevant Coursework & Academic Achievements:</li>
+        <ul>
+          <li>Bahamas Biology Project</li>
+          <li>High Honor Roll (9th Grade)</li>
+          <li>Honor Roll x3 (Middle School)</li>
+          <li>Principal Award (Leadership, Middle School)</li>
+        </ul>
+        <li>Extracurricular Activities: Riley’s Way, Green Team, Track and Field, Tennis</li>
+        <li>Work Experience: Summer work projects (e.g., pouring water)</li>
       </ul>
     `;
   }
@@ -40,21 +47,11 @@ function openPopup(section) {
     content = `
       <h2>Skills</h2>
       <ul>
-        <li>Python programming (foundational experience)</li>
-        <li>HTML & CSS for basic web design</li>
-        <li>Mandarin Chinese (currently learning)</li>
-        <li>Teamwork and collaboration</li>
-        <li>Time management and organization</li>
-      </ul>
-    `;
-  }
-
-  if (section === "contact") {
-    content = `
-      <h2>Contact</h2>
-      <ul>
-        <li>Email contact information is available at the bottom of the page.</li>
-        <li>GitHub profile is linked for academic and coding projects.</li>
+        <li>Programming: Python, Basic HTML/CSS</li>
+        <li>Languages: Mandarin (learning), some Spanish</li>
+        <li>Personal: Fast typer, works well alone and in a team</li>
+        <li>Soft Skills: Communication, adaptability, hard work ethic</li>
+        <li>Other: Bahamas Biodiversity Project experience</li>
       </ul>
     `;
   }
@@ -62,6 +59,7 @@ function openPopup(section) {
   document.getElementById("popup-text").innerHTML = content;
 }
 
+// Close popup
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }

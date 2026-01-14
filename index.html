@@ -2,62 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Maddox Prata | Personal Website</title>
+  <title>Maddox Prata - Personal Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1 class="title">Maddox Prata</h1>
-<p class="subtitle">Personal Website</p>
-
-<!-- CHRISTMAS TREE -->
-<div class="tree-container">
-
-  <!-- TREE TRIANGLES -->
-  <div class="tree-layer layer1"></div>
-  <div class="tree-layer layer2"></div>
-  <div class="tree-layer layer3"></div>
-
-  <!-- STEM -->
-  <div class="tree-stem"></div>
-
-  <!-- ORNAMENTS -->
-  <div class="ornament star" onclick="openPopup('about')">⭐</div>
-  <div class="ornament red" onclick="openPopup('welcome')"></div>
-  <div class="ornament white" onclick="openPopup('education')"></div>
-  <div class="ornament snowman" onclick="openPopup('skills')"></div>
-  <div class="ornament bell" onclick="openPopup('contact')"></div>
-
-</div>
-
-<!-- LEGEND -->
-<div id="legend">
-  <h3>Ornament Legend</h3>
-  <ul>
-    <li><span class="legend-icon star"></span> About Me</li>
-    <li><span class="legend-icon red"></span> Welcome</li>
-    <li><span class="legend-icon white"></span> Education</li>
-    <li><span class="legend-icon snowman"></span> Skills</li>
-    <li><span class="legend-icon bell"></span> Contact</li>
-  </ul>
-</div>
-
-<!-- POPUP -->
-<div id="popup">
-  <div id="popup-content">
-    <button onclick="closePopup()">✖</button>
-    <div id="popup-text"></div>
+  <!-- WELCOME PAGE -->
+  <div id="welcome-page">
+    <h1>Welcome to My Personal Website</h1>
+    <p>This website highlights my interests, goals, and experiences in a creative and professional format.</p>
+    <button onclick="showTree()">Enter My Christmas Tree</button>
   </div>
-</div>
 
-<!-- CONTACT FOOTER -->
-<footer>
-  <h3>Contact Me</h3>
-  <p>Email: <a href="mailto:mprata@browning.edu">mprata@browning.edu</a></p>
-  <p>GitHub: <a href="https://mprata3.github.io/maddoxprata.github.io/#projects" target="_blank">github.com/yourusername</a></p>
-</footer>
+  <!-- CHRISTMAS TREE PAGE -->
+  <div id="tree-page" style="display:none;">
+    <h1>My Christmas Tree</h1>
+    <p>Click an ornament to learn more!</p>
 
-<script src="script.js"></script>
+    <div class="ornaments">
+      <button class="ornament star" onclick="openPopup('about')">⭐ About Me</button>
+      <button class="ornament white" onclick="openPopup('education')">🎓 Education</button>
+      <button class="ornament red" onclick="openPopup('skills')">🛠 Skills</button>
+    </div>
+  </div>
+
+  <!-- POPUP -->
+  <div id="popup" style="display:none;">
+    <div id="popup-content">
+      <span class="close" onclick="closePopup()">✖</span>
+      <div id="popup-text"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
