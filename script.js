@@ -7,7 +7,7 @@ function openPopup(section) {
     content = `<h2>About Me</h2>
                <ul>
                  <li>I am passionate about working with plants as an active member of my school’s Green Team.</li>
-                 <li>I also contribute to my community through Riley’s Way, assisting at food pantries, soup kitchens, dog shelters, and many drives that help the community./li>
+                 <li>I also contribute to my community through Riley’s Way, assisting at food pantries, soup kitchens, dog shelters, and many drives that help the community.</li>
                  <li>My long-term goal is to attend a reputable college and build a meaningful future that helps benefit the community I live in.</li>
                  <li>Additionally, I maintain an active lifestyle through sports and outdoor activities, including tennis, walking, running, and biking.</li>
                </ul>`;
