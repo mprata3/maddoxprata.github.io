@@ -8,32 +8,49 @@
 </head>
 <body>
 
-  <!-- WELCOME PAGE -->
-  <div id="welcome-page">
-    <h1>Welcome to My Personal Website</h1>
-    <p>This website highlights my interests, goals, and experiences in a creative and professional format.</p>
-    <button onclick="showTree()">Enter My Christmas Tree</button>
-  </div>
+  <!-- NAVIGATION BAR -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#tree">Christmas Tree</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- CHRISTMAS TREE PAGE -->
-  <div id="tree-page" style="display:none;">
+  <!-- WELCOME SECTION -->
+  <section id="welcome">
+    <h1>Welcome to My Website</h1>
+    <p>Hello! I'm Maddox Prata, a high school student interested in academics, community service, and personal growth. Scroll down to explore my Christmas tree with ornaments that tell my story!</p>
+  </section>
+
+  <!-- CHRISTMAS TREE SECTION -->
+  <section id="tree">
     <h1>My Christmas Tree</h1>
-    <p>Click an ornament to learn more!</p>
-
-    <div class="ornaments">
-      <button class="ornament star" onclick="openPopup('about')">⭐ About Me</button>
-      <button class="ornament white" onclick="openPopup('education')">🎓 Education</button>
-      <button class="ornament red" onclick="openPopup('skills')">🛠 Skills</button>
+    <p>Click the ornaments to learn more!</p>
+    <div class="tree-container">
+      <!-- Example Ornaments -->
+      <div class="ornament" onclick="openPopup('about')">⭐ About Me</div>
+      <div class="ornament" onclick="openPopup('education')">🎓 Education</div>
+      <div class="ornament" onclick="openPopup('skills')">🛠 Skills</div>
     </div>
-  </div>
+  </section>
 
   <!-- POPUP -->
   <div id="popup">
     <div id="popup-content">
-      <span id="close-btn" onclick="closePopup()">×</span>
+      <span id="close-btn" onclick="closePopup()">✖</span>
       <div id="popup-text"></div>
     </div>
   </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <p>Email: <a href="mailto:maddox@example.com">maddox@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/" target="_blank">github.com/maddox</a></p>
+  </section>
 
   <script src="script.js"></script>
 </body>

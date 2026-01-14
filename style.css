@@ -1,46 +1,91 @@
+/* General Styles */
 body {
-  font-family: "Times New Roman", serif;
-  text-align: center;
-  background-color: #f2f2f2;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: #f0f8ff;
+}
+
+/* Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #004d00;
+  color: white;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
-button {
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  margin: 10px;
-  border-radius: 5px;
-  border: none;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#tree-page {
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+#welcome {
+  background-color: #e6f2ff;
+  text-align: center;
+}
+
+#tree {
+  background-color: #d9f2d9;
+  text-align: center;
+}
+
+#contact {
+  background-color: #fff0f5;
+  text-align: center;
+}
+
+/* Ornaments */
+.tree-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: 30px;
 }
 
-.ornaments {
+.ornament {
+  background-color: red;
+  color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.2s;
 }
 
-.ornament {
-  font-size: 20px;
-  padding: 15px;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  line-height: 40px;
+.ornament:hover {
+  transform: scale(1.2);
 }
 
-.star { background-color: gold; }
-.white { background-color: white; }
-.red { background-color: red; color: white; }
-
-/* POPUP STYLING */
+/* Popup */
 #popup {
   display: none;
   position: fixed;
@@ -48,24 +93,24 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  z-index: 1000;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
 }
 
 #popup-content {
   background-color: white;
-  margin: 10% auto;
-  padding: 20px;
-  width: 70%;
+  padding: 30px;
+  border-radius: 15px;
   max-width: 600px;
-  border-radius: 10px;
+  text-align: left;
   position: relative;
 }
 
 #close-btn {
   position: absolute;
   top: 10px;
-  right: 20px;
-  font-size: 30px;
+  right: 15px;
   cursor: pointer;
+  font-size: 20px;
 }
