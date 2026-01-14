@@ -284,3 +284,35 @@ section {
   color: #666;
   font-style: italic;
 }
+
+/* Snowfall only in Christmas tree section */
+#tree {
+  position: relative; /* Needed for absolute snowflakes */
+  overflow: hidden;
+}
+
+/* Snowflake styles */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 10px;
+  pointer-events: none; /* So it doesn’t block clicks */
+  user-select: none;
+  opacity: 0.8;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Fall animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(450px) translateX(30px);
+    opacity: 0.2;
+  }
+}

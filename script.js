@@ -65,3 +65,24 @@ function closePopup() {
     popup.style.display = "none";
   }, 250);
 }
+
+// Snowfall for Christmas Tree
+function createSnowfall(num) {
+  const tree = document.getElementById("tree");
+
+  for (let i = 0; i < num; i++) {
+    const snow = document.createElement("div");
+    snow.classList.add("snowflake");
+    snow.style.left = Math.random() * tree.offsetWidth + "px";
+    snow.style.fontSize = Math.random() * 12 + 8 + "px"; // 8px to 20px
+    snow.style.animationDuration = Math.random() * 5 + 5 + "s"; // 5s to 10s
+    snow.style.opacity = Math.random() * 0.5 + 0.5; // 0.5 to 1
+    snow.innerHTML = "❄"; // Snowflake emoji
+    tree.appendChild(snow);
+  }
+}
+
+// Call it once the page loads
+window.addEventListener("load", () => {
+  createSnowfall(50); // 50 snowflakes, adjust as needed
+});
