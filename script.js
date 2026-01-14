@@ -81,3 +81,6 @@ function createSnowfall(num) {
     tree.appendChild(snow);
   }
 }
+
+// Trigger snowfall on page load
+window.addEventListener("load", () => createSnowfall(40));
