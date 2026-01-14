@@ -119,3 +119,29 @@ section {
   cursor: pointer;
   font-size: 20px;
 }
+
+/* Legend styles */
+.legend {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+.legend li {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.legend-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  margin-right: 5px;
+}
+
