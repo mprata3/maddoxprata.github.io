@@ -79,6 +79,16 @@ section {
   position: relative;
 }
 
+/* Tree trunk */
+.tree-trunk {
+  width: 60px;
+  height: 80px;
+  background-color: #8b4513; /* brown wood color */
+  margin: -10px auto 0 auto;
+  border-radius: 8px;
+}
+
+
 /* Ornaments on tree */
 .ornament {
   position: absolute;
