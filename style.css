@@ -174,3 +174,27 @@ section {
   text-align: center;
   margin-right: 8px;
 }
+
+/* Slide layout (Google Slides style) */
+.slide {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.slide-text {
+  flex: 1;
+}
+
+.slide-image {
+  flex: 1;
+  height: 220px;
+  background-color: #eee;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-style: italic;
+}
+

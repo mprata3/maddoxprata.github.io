@@ -55,12 +55,26 @@
   </section>
 
   <!-- POPUP -->
-  <div id="popup">
-    <div id="popup-content">
-      <span id="close-btn" onclick="closePopup()">✖</span>
-      <div id="popup-text"></div>
+<div id="popup">
+  <div id="popup-content">
+    <span id="close-btn" onclick="closePopup()">✖</span>
+
+    <!-- Slide layout (Google Slides style) -->
+    <div class="slide">
+      <!-- Left side: text -->
+      <div class="slide-text" id="popup-text">
+        <!-- JavaScript injects text here -->
+      </div>
+
+      <!-- Right side: image (placeholder for now) -->
+      <div class="slide-image">
+        <p>Image goes here</p>
+      </div>
     </div>
+
   </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>
