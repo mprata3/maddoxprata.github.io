@@ -105,8 +105,13 @@ section {
   transition: transform 0.2s;
 }
 
+.ornament {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
 .ornament:hover {
-  transform: scale(1.3);
+  transform: scale(1.35);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* Popup */
@@ -198,3 +203,84 @@ section {
   font-style: italic;
 }
 
+/* =========================
+   POPUP ANIMATIONS
+   ========================= */
+
+/* Fade-in background */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Scale popup */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Slide-in text */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide-in image */
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animations */
+#popup {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#popup-content {
+  animation: scaleIn 0.35s ease-out;
+}
+
+/* Slide layout */
+.slide {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Text side */
+.slide-text {
+  flex: 1;
+  animation: slideInLeft 0.4s ease-out;
+}
+
+/* Image side */
+.slide-image {
+  flex: 1;
+  background-color: #eee;
+  height: 220px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInRight 0.4s ease-out;
+  color: #666;
+  font-style: italic;
+}
