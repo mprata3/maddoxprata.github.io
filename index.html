@@ -29,15 +29,27 @@
     <h1>My Christmas Tree</h1>
     <p>Click the ornaments to learn more!</p>
 
-    <div class="tree">
-      <!-- Tree triangle -->
-      <div class="tree-triangle"></div>
+    <div class="tree-container">
+      <div class="tree">
+        <!-- Tree triangle -->
+        <div class="tree-triangle"></div>
 
-      <!-- Ornaments -->
-      <div class="ornament" style="top: 20%; left: 45%;" onclick="openPopup('about')">⭐</div>
-      <div class="ornament" style="top: 40%; left: 30%;" onclick="openPopup('education')">🎓</div>
-      <div class="ornament" style="top: 40%; left: 60%;" onclick="openPopup('skills')">🛠</div>
-      <!-- Add more ornaments as needed -->
+        <!-- Ornaments -->
+        <div class="ornament" style="top: 20%; left: 45%;" onclick="openPopup('about')">⭐</div>
+        <div class="ornament" style="top: 40%; left: 30%;" onclick="openPopup('education')">🎓</div>
+        <div class="ornament" style="top: 40%; left: 60%;" onclick="openPopup('skills')">🛠</div>
+        <!-- Add more ornaments as needed -->
+      </div>
+
+      <!-- Legend -->
+      <div class="legend">
+        <h3>Ornament Legend</h3>
+        <ul>
+          <li><span class="legend-icon">⭐</span> About Me</li>
+          <li><span class="legend-icon">🎓</span> Education & Achievements</li>
+          <li><span class="legend-icon">🛠</span> Skills</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -49,20 +61,6 @@
     </div>
   </div>
 
-  <!-- Legend -->
-<div class="legend">
-  <h3>Ornament Legend</h3>
-  <ul>
-    <li><span class="legend-icon">⭐</span> About Me</li>
-    <li><span class="legend-icon">🎓</span> Education & Achievements</li>
-    <li><span class="legend-icon">🛠</span> Skills</li>
-    <!-- Add more ornaments here if needed -->
-  </ul>
-</div>
-
-
-
   <script src="script.js"></script>
 </body>
 </html>
-

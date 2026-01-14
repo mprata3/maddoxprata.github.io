@@ -51,12 +51,21 @@ section {
   background-color: #d9f2d9;
 }
 
+/* Tree container with legend */
+.tree-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 30px;
+}
+
 /* Tree */
 .tree {
   position: relative;
   width: 300px;
   height: 400px;
-  margin: 50px auto;
 }
 
 /* Green triangle for tree */
@@ -122,17 +131,12 @@ section {
 
 /* Legend styles - side box */
 .legend {
-  position: absolute;
-  top: 50%;
-  right: 30px; /* distance from right side */
-  transform: translateY(-50%); /* vertically center */
   background-color: #f9c2c2; /* light red/pink */
   padding: 20px 25px;
   border-radius: 15px; /* rounded corners */
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* subtle shadow */
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
   width: 200px;
   text-align: left;
-  z-index: 10; /* makes sure it sits above tree decorations */
 }
 
 .legend h3 {
