@@ -14,7 +14,6 @@
       <ul>
         <li><a href="#welcome">Welcome</a></li>
         <li><a href="#tree">Christmas Tree</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -29,11 +28,16 @@
   <section id="tree">
     <h1>My Christmas Tree</h1>
     <p>Click the ornaments to learn more!</p>
-    <div class="tree-container">
-      <!-- Example Ornaments -->
-      <div class="ornament" onclick="openPopup('about')">⭐ About Me</div>
-      <div class="ornament" onclick="openPopup('education')">🎓 Education</div>
-      <div class="ornament" onclick="openPopup('skills')">🛠 Skills</div>
+
+    <div class="tree">
+      <!-- Tree triangle -->
+      <div class="tree-triangle"></div>
+
+      <!-- Ornaments -->
+      <div class="ornament" style="top: 20%; left: 45%;" onclick="openPopup('about')">⭐</div>
+      <div class="ornament" style="top: 40%; left: 30%;" onclick="openPopup('education')">🎓</div>
+      <div class="ornament" style="top: 40%; left: 60%;" onclick="openPopup('skills')">🛠</div>
+      <!-- Add more ornaments as needed -->
     </div>
   </section>
 
@@ -44,13 +48,6 @@
       <div id="popup-text"></div>
     </div>
   </div>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h1>Contact Me</h1>
-    <p>Email: <a href="mailto:maddox@example.com">maddox@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/" target="_blank">github.com/maddox</a></p>
-  </section>
 
   <script src="script.js"></script>
 </body>
