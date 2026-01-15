@@ -13,7 +13,7 @@ body {
    ========================= */
 .navbar {
   width: 100%;
-  background-color: #004d00; /* dark green strip */
+  background-color: #85ac85; /* dark green just green strip */
   display: flex;
   justify-content: center;
   gap: 20px;
