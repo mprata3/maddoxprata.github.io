@@ -1,11 +1,13 @@
+// ===== POPUP HANDLING =====
 function openPopup(section) {
   const popup = document.getElementById("popup");
   const popupText = document.getElementById("popup-text");
-  const popupImage = document.getElementById("popup-image");
+  const slideImage = document.querySelector(".slide-image");
 
   let content = "";
-  let imageHTML = "";
+  let imageHtml = "<p>Image goes here</p>"; // default placeholder
 
+  // ABOUT ME
   if (section === "about") {
     content = `
       <h2>About Me</h2>
@@ -16,24 +18,46 @@ function openPopup(section) {
         <li>I maintain an active lifestyle through sports and outdoor activities, including tennis, walking, running, and biking.</li>
       </ul>
     `;
-    imageHTML = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Prata">`;
+    // Only About Me has your actual photo
+    imageHtml = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Prata">`;
   }
 
+  // EDUCATION & ACHIEVEMENTS
   if (section === "education") {
     content = `
-      <h2>Education & Achievements</h2>
-      <ul>
-        <li>The Browning School — 10th Grade, expected to graduate 2028</li>
-        <li>Simon Baruch MS 104 — Graduated 2024</li>
-        <li>Relevant Coursework: Algebra 2, Modern World History, Chemistry, Computer Science, English, Mandarin</li>
-        <li>Work Experience: Upcoming Summer Position in restaurant (dishwashing, water service)</li>
-        <li>Honors: High Honor Roll (9th Grade), 3× Honor Roll (Middle School)</li>
-        <li>Extracurriculars: Riley’s Way, Green Team, Tennis, Track & Field, Piano & Clarinet</li>
-      </ul>
+      <div class="resume">
+        <h2>Resume</h2>
+        <h3>Education</h3>
+        <p>The Browning School | New York, NY</p>
+        <p>Sophomore (10th Grade) expected to graduate in 2028</p>
+        <p>Relevant Coursework: Algebra 2, Modern World History, Chemistry, Computer Science, English, Mandarin</p>
+
+        <p>Simon Baruch (M.S. 104) | Graduated: 2024</p>
+
+        <h3>Work Experience</h3>
+        <p>Upcoming Summer Position in a restaurant</p>
+        <p>Will help clean dishes, and pour water</p>
+
+        <h3>Honors & Awards</h3>
+        <ul>
+          <li>High Honor Roll 9th Grade</li>
+          <li>3x Honor Roll (Middle School)</li>
+        </ul>
+
+        <h3>Extracurricular Activities</h3>
+        <ul>
+          <li>Community Service at Church (soup kitchens, dog shelters)</li>
+          <li>Athletics: Varsity Tennis, Varsity Indoor Track & Field</li>
+          <li>Clubs: Green Team, Riley's Way</li>
+          <li>Arts: Piano & Clarinet</li>
+        </ul>
+      </div>
     `;
-    imageHTML = `<p>Image placeholder</p>`;
+    // Use default placeholder image for now
+    imageHtml = `<p>Image goes here</p>`;
   }
 
+  // SKILLS
   if (section === "skills") {
     content = `
       <h2>Skills</h2>
@@ -46,31 +70,39 @@ function openPopup(section) {
         <li>Experience working in groups during a biodiversity project in the Bahamas</li>
       </ul>
     `;
-    imageHTML = `<p>Image placeholder</p>`;
+    // Use default placeholder image for now
+    imageHtml = `<p>Image goes here</p>`;
   }
 
-  // Inject content and image
+  // Inject content and image into popup
   popupText.innerHTML = content;
-  popupImage.innerHTML = imageHTML;
+  slideImage.innerHTML = imageHtml;
 
   // Show popup
   popup.style.display = "flex";
   popup.classList.remove("fade-out");
   popup.classList.add("fade-in");
+
+  // Hide navbar while popup is open
+  document.querySelector("nav").classList.add("hidden");
 }
 
 function closePopup() {
   const popup = document.getElementById("popup");
 
+  // Smooth exit animation
   popup.classList.remove("fade-in");
   popup.classList.add("fade-out");
+
+  // Restore navbar after popup closes
+  document.querySelector("nav").classList.remove("hidden");
 
   setTimeout(() => {
     popup.style.display = "none";
   }, 250);
 }
 
-// Snowfall for Christmas Tree
+// ===== SNOWFALL FOR CHRISTMAS TREE =====
 function createSnowfall(num) {
   const tree = document.getElementById("tree");
 
@@ -78,12 +110,13 @@ function createSnowfall(num) {
     const snow = document.createElement("div");
     snow.classList.add("snowflake");
     snow.style.left = Math.random() * tree.offsetWidth + "px";
-    snow.style.fontSize = Math.random() * 12 + 8 + "px";
-    snow.style.animationDuration = Math.random() * 5 + 5 + "s";
-    snow.style.opacity = Math.random() * 0.5 + 0.5;
-    snow.innerHTML = "❄";
+    snow.style.fontSize = Math.random() * 12 + 8 + "px"; // 8px to 20px
+    snow.style.animationDuration = Math.random() * 5 + 5 + "s"; // 5s to 10s
+    snow.style.opacity = Math.random() * 0.5 + 0.5; // 0.5 to 1
+    snow.innerHTML = "❄"; // Snowflake emoji
     tree.appendChild(snow);
   }
 }
 
+// Trigger snowfall on page load
 window.addEventListener("load", () => createSnowfall(50));

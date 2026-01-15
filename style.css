@@ -20,6 +20,22 @@ body {
   z-index: 2000; /* <- make sure it’s above the header */
 }
 
+/* Navigation visibility control */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1500; /* below popup (2000), above page */
+  transition: opacity 0.3s ease;
+}
+
+/* Hide nav ONLY when popup is open */
+nav.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
 nav ul {
   list-style: none;
   display: flex;
