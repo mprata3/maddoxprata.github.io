@@ -76,7 +76,7 @@ function createSnowfall(num) {
     snow.style.left = Math.random() * tree.offsetWidth + "px";
     snow.style.fontSize = Math.random() * 12 + 8 + "px"; // 8px to 20px
     snow.style.animationDuration = Math.random() * 5 + 5 + "s"; // 5s to 10s
-    snow.style.opacity = Math.random() * 0.3 + 0.7; // 0.7 to 1 for more visibility
+    snow.style.opacity = Math.random() * 0.3 + 0.8; // 0.7 to 1 for more visibility
     snow.innerHTML = "❄"; // Snowflake emoji
     tree.appendChild(snow);
   }
