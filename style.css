@@ -29,6 +29,33 @@ nav {
   transition: opacity 0.3s ease;
 }
 
+/* Navbar buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  background-color: #004d00; /* dark green background for navbar (optional) */
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #008000; /* green button */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #00b300; /* slightly brighter green on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
 /* Hide nav ONLY when popup is open */
 nav.hidden {
   opacity: 0;
