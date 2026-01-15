@@ -18,8 +18,8 @@ function openPopup(section) {
         <li>I maintain an active lifestyle through sports and outdoor activities, including tennis, walking, running, and biking.</li>
       </ul>
     `;
-    // Bahamas photo only for About Me
-    imageHtml = `<img src="bahamasphoto.jpg" alt="Maddox in the Bahamas">`;
+    // Tennis photo for About Me
+    imageHtml = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Tennis Photo">`;
   }
 
   // EDUCATION & ACHIEVEMENTS
@@ -53,7 +53,7 @@ function openPopup(section) {
         </ul>
       </div>
     `;
-    imageHtml = `<img src="educationplaceholder.jpg" alt="Education Image">`; // optional placeholder
+    imageHtml = `<p>Image goes here</p>`; // optional placeholder
   }
 
   // SKILLS
@@ -69,7 +69,8 @@ function openPopup(section) {
         <li>Experience working in groups during a biodiversity project in the Bahamas</li>
       </ul>
     `;
-    imageHtml = `<img src="skillsplaceholder.jpg" alt="Skills Image">`; // optional placeholder
+    // Bahamas photo for Skills
+    imageHtml = `<img src="bahamasphoto.jpg" alt="Bahamas Project">`;
   }
 
   // Additional fun ornament examples
