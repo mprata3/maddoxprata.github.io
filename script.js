@@ -1,8 +1,10 @@
 function openPopup(section) {
   const popup = document.getElementById("popup");
   const popupText = document.getElementById("popup-text");
+  const popupImage = document.getElementById("popup-image");
 
   let content = "";
+  let imageHTML = "";
 
   if (section === "about") {
     content = `
@@ -14,39 +16,22 @@ function openPopup(section) {
         <li>I maintain an active lifestyle through sports and outdoor activities, including tennis, walking, running, and biking.</li>
       </ul>
     `;
+    imageHTML = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Prata">`;
   }
 
   if (section === "education") {
     content = `
-      <div class="resume">
-        <h2>Resume</h2>
-        
-        <h3>Education</h3>
-        <p><strong>The Browning School | New York, NY</strong><br>
-        Sophomore (10th Grade), expected to graduate 2028<br>
-        Relevant Coursework: Algebra 2, Modern World History, Chemistry, Computer Science, English, Mandarin</p>
-
-        <p><strong>Simon Baruch (M.S. 104)</strong><br>
-        Graduated: 2024</p>
-
-        <h3>Work Experience</h3>
-        <p>Upcoming summer position in a restaurant — will help clean dishes and pour water</p>
-
-        <h3>Honors & Awards</h3>
-        <ul>
-          <li>High Honor Roll 9th Grade</li>
-          <li>3× Honor Roll (Middle School)</li>
-        </ul>
-
-        <h3>Extracurricular Activities</h3>
-        <ul>
-          <li>Community Service at Church (soup kitchens, dog shelters)</li>
-          <li>Athletics: Varsity Tennis, Varsity Indoor Track & Field</li>
-          <li>Clubs: Green Team, Riley’s Way</li>
-          <li>Arts: Piano & Clarinet</li>
-        </ul>
-      </div>
+      <h2>Education & Achievements</h2>
+      <ul>
+        <li>The Browning School — 10th Grade, expected to graduate 2028</li>
+        <li>Simon Baruch MS 104 — Graduated 2024</li>
+        <li>Relevant Coursework: Algebra 2, Modern World History, Chemistry, Computer Science, English, Mandarin</li>
+        <li>Work Experience: Upcoming Summer Position in restaurant (dishwashing, water service)</li>
+        <li>Honors: High Honor Roll (9th Grade), 3× Honor Roll (Middle School)</li>
+        <li>Extracurriculars: Riley’s Way, Green Team, Tennis, Track & Field, Piano & Clarinet</li>
+      </ul>
     `;
+    imageHTML = `<p>Image placeholder</p>`;
   }
 
   if (section === "skills") {
@@ -61,11 +46,14 @@ function openPopup(section) {
         <li>Experience working in groups during a biodiversity project in the Bahamas</li>
       </ul>
     `;
+    imageHTML = `<p>Image placeholder</p>`;
   }
 
+  // Inject content and image
   popupText.innerHTML = content;
+  popupImage.innerHTML = imageHTML;
 
-  // SHOW popup with animation
+  // Show popup
   popup.style.display = "flex";
   popup.classList.remove("fade-out");
   popup.classList.add("fade-in");
@@ -74,7 +62,6 @@ function openPopup(section) {
 function closePopup() {
   const popup = document.getElementById("popup");
 
-  // Smooth exit animation
   popup.classList.remove("fade-in");
   popup.classList.add("fade-out");
 
@@ -91,15 +78,12 @@ function createSnowfall(num) {
     const snow = document.createElement("div");
     snow.classList.add("snowflake");
     snow.style.left = Math.random() * tree.offsetWidth + "px";
-    snow.style.fontSize = Math.random() * 12 + 8 + "px"; // 8px to 20px
-    snow.style.animationDuration = Math.random() * 5 + 5 + "s"; // 5s to 10s
-    snow.style.opacity = Math.random() * 0.5 + 0.5; // 0.5 to 1
-    snow.innerHTML = "❄"; // Snowflake emoji
+    snow.style.fontSize = Math.random() * 12 + 8 + "px";
+    snow.style.animationDuration = Math.random() * 5 + 5 + "s";
+    snow.style.opacity = Math.random() * 0.5 + 0.5;
+    snow.innerHTML = "❄";
     tree.appendChild(snow);
   }
 }
 
-// Call it once the page loads
-window.addEventListener("load", () => {
-  createSnowfall(50); // 50 snowflakes, adjust as needed
-});
+window.addEventListener("load", () => createSnowfall(50));
