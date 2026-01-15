@@ -213,7 +213,7 @@ section {
 }
 
 #popup-content {
-  background-color: white;
+  background-color: rgb(252, 145, 145);
   padding: 30px;
   border-radius: 15px;
   max-width: 600px;
