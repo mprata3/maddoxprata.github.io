@@ -229,6 +229,40 @@ section {
   font-size: 20px;
 }
 
+/* Resume style */
+.resume h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resume h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+}
+
+.resume p, .resume ul {
+  margin: 5px 0 15px 0;
+  line-height: 1.5;
+}
+
+.resume ul {
+  padding-left: 20px;
+}
+
+.slide-image {
+  background-color: #eee;
+  height: 220px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-style: italic;
+}
+
+
 /* Legend styles - side box */
 .legend {
   background-color: #f9c2c2; /* light red/pink */

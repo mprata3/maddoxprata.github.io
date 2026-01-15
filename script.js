@@ -18,17 +18,34 @@ function openPopup(section) {
 
   if (section === "education") {
     content = `
-      <h2>Education & Achievements</h2>
-      <ul>
-        <li>The Browning School — Current High School (10th Grade)</li>
-        <li>Simon Baruch MS 104</li>
-        <li>PS 340 Elementary School</li>
-        <li>Bahamas Biology Work Project</li>
-        <li>High Honor Roll (9th Grade)</li>
-        <li>Honor Roll ×3 (Middle School)</li>
-        <li>Principal Award (Middle School)</li>
-        <li>Extracurriculars: Riley’s Way, Green Team, Track & Field, Tennis</li>
-      </ul>
+      <div class="resume">
+        <h2>Resume</h2>
+        
+        <h3>Education</h3>
+        <p><strong>The Browning School | New York, NY</strong><br>
+        Sophomore (10th Grade), expected to graduate 2028<br>
+        Relevant Coursework: Algebra 2, Modern World History, Chemistry, Computer Science, English, Mandarin</p>
+
+        <p><strong>Simon Baruch (M.S. 104)</strong><br>
+        Graduated: 2024</p>
+
+        <h3>Work Experience</h3>
+        <p>Upcoming summer position in a restaurant — will help clean dishes and pour water</p>
+
+        <h3>Honors & Awards</h3>
+        <ul>
+          <li>High Honor Roll 9th Grade</li>
+          <li>3× Honor Roll (Middle School)</li>
+        </ul>
+
+        <h3>Extracurricular Activities</h3>
+        <ul>
+          <li>Community Service at Church (soup kitchens, dog shelters)</li>
+          <li>Athletics: Varsity Tennis, Varsity Indoor Track & Field</li>
+          <li>Clubs: Green Team, Riley’s Way</li>
+          <li>Arts: Piano & Clarinet</li>
+        </ul>
+      </div>
     `;
   }
 
