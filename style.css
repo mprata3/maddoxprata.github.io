@@ -47,6 +47,53 @@ section {
   background-color: #e6f2ff;
 }
 
+/* Hero Section */
+.welcome-hero {
+  text-align: center;
+  padding: 80px 20px 50px 20px;
+}
+
+.welcome-hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.welcome-hero p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.welcome-buttons {
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 0 10px 10px 10px;
+  background-color: #004d00;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #006600;
+  transform: translateY(-3px);
+}
+
+/* Profile image */
+.welcome-image img {
+  width: 250px;
+  max-width: 80%;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+}
+
+
 #tree {
   background-color: #d9f2d9;
 }
