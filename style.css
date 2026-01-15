@@ -43,8 +43,46 @@ section {
   text-align: center;
 }
 
+/* Welcome page background */
 #welcome {
-  background-color: #f9c2c2;
+  background-color: #ffe6e6; /* light red */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Buttons styled as boxes */
+.welcome-buttons .btn {
+  display: inline-block;
+  padding: 20px 35px;
+  margin: 10px;
+  background-color: #ff4d4d; /* slightly darker red */
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.welcome-buttons .btn:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Profile image */
+.welcome-image img {
+  width: 250px;
+  max-width: 80%;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
 }
 
 /* Hero Section */
