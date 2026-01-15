@@ -18,8 +18,8 @@ function openPopup(section) {
         <li>I maintain an active lifestyle through sports and outdoor activities, including tennis, walking, running, and biking.</li>
       </ul>
     `;
-    // Only About Me has your actual photo
-    imageHtml = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Prata">`;
+    // Bahamas photo only for About Me
+    imageHtml = `<img src="bahamasphoto.jpg" alt="Maddox in the Bahamas">`;
   }
 
   // EDUCATION & ACHIEVEMENTS
@@ -53,8 +53,7 @@ function openPopup(section) {
         </ul>
       </div>
     `;
-    // Use default placeholder image for now
-    imageHtml = `<p>Image goes here</p>`;
+    imageHtml = `<img src="educationplaceholder.jpg" alt="Education Image">`; // optional placeholder
   }
 
   // SKILLS
@@ -70,8 +69,18 @@ function openPopup(section) {
         <li>Experience working in groups during a biodiversity project in the Bahamas</li>
       </ul>
     `;
-    // Use default placeholder image for now
-    imageHtml = `<p>Image goes here</p>`;
+    imageHtml = `<img src="skillsplaceholder.jpg" alt="Skills Image">`; // optional placeholder
+  }
+
+  // Additional fun ornament examples
+  if (section === "fun1") {
+    content = `<h2>Fun Fact 1</h2><p>I love coding little interactive websites and experiments!</p>`;
+    imageHtml = `<img src="fun1.jpg" alt="Fun Image 1">`;
+  }
+
+  if (section === "fun2") {
+    content = `<h2>Fun Fact 2</h2><p>I enjoy exploring nature and taking scenic photos.</p>`;
+    imageHtml = `<img src="fun2.jpg" alt="Fun Image 2">`;
   }
 
   // Inject content and image into popup
@@ -112,7 +121,7 @@ function createSnowfall(num) {
     snow.style.left = Math.random() * tree.offsetWidth + "px";
     snow.style.fontSize = Math.random() * 12 + 8 + "px"; // 8px to 20px
     snow.style.animationDuration = Math.random() * 5 + 5 + "s"; // 5s to 10s
-    snow.style.opacity = Math.random() * 0.5 + 0.5; // 0.5 to 1
+    snow.style.opacity = Math.random() * 0.5 + 0.9; // 0.5 to 1
     snow.innerHTML = "❄"; // Snowflake emoji
     tree.appendChild(snow);
   }
