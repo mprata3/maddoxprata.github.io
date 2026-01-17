@@ -191,8 +191,10 @@ section {
 .welcome-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* crops instead of squishing */
+  object-fit: cover;
+  object-position: top center; /* 👈 THIS is the key */
 }
+
 
 
 /* =========================
