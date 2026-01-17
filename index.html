@@ -1,4 +1,98 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maddox Prata - Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header>
+    <nav class="navbar">
+      <a href="#welcome" class="nav-btn">Welcome</a>
+      <a href="#tree" class="nav-btn">Christmas Tree</a>
+      <a href="#contact" class="nav-btn">Contact</a>
+    </nav>
+  </header>
+
+  <!-- WELCOME SECTION -->
+  <section id="welcome">
+    <div class="welcome-hero">
+      <h1>Welcome to Maddox Prata's Personal Website!</h1>
+      <p>Hi! Explore my interests, achievements, and hobbies below.</p>
+      
+      <!-- Buttons -->
+      <div class="welcome-buttons">
+        <a href="#tree" class="btn">🎄 Christmas Tree (Info About Me)</a>
+        <a href="#contact" class="btn">📬 Contact Me</a>
+      </div>
+
+      <!-- Big profile picture -->
+      <div class="welcome-image">
+        <img src="selfport.jpg" alt="Maddox Prata">
+      </div>
+    </div>
+  </section>
+
+  <!-- CHRISTMAS TREE SECTION -->
+  <section id="tree">
+    <h1>My Christmas Tree</h1>
+    <p>Click the ornaments to learn more!</p>
+
+    <div class="tree-container">
+      <div class="tree">
+        <div class="tree-triangle"></div>
+        <div class="tree-trunk"></div>
+
+        <!-- Ornaments -->
+        <div class="ornament" style="top: 20%; left: 45%;" onclick="openPopup('about')">⭐</div>
+        <div class="ornament" style="top: 40%; left: 30%;" onclick="openPopup('education')">🎓</div>
+        <div class="ornament" style="top: 40%; left: 60%;" onclick="openPopup('skills')">🛠</div>
+      </div>
+
+      <div class="legend">
+        <h3>Ornament Legend</h3>
+        <ul>
+          <li><span class="legend-icon">⭐</span> About Me</li>
+          <li><span class="legend-icon">🎓</span> Education & Achievements</li>
+          <li><span class="legend-icon">🛠</span> Skills</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUP -->
+  <div id="popup">
+    <div id="popup-content">
+      <span id="close-btn" onclick="closePopup()">✖</span>
+
+      <div class="slide">
+        <!-- Left: text -->
+        <div class="slide-text" id="popup-text"></div>
+
+        <!-- Right: image -->
+        <div class="slide-image" id="popup-image">
+          <!-- JS injects image dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <p>If you’d like to reach out, feel free to contact me via email or check out my GitHub!</p>
+
+    <div class="contact-links">
+      <a href="mailto:mprata@browning.edu" class="btn">Email Me</a>
+      <a href="https://github.com/mprata3/maddoxprata.github.io" target="_blank" class="btn">GitHub</a>
+    </div>
+  </section>
+
+  <!-- UPDATED SCRIPT -->
+  <script>
   // ===== POPUP HANDLING =====
   function openPopup(section) {
     const popup = document.getElementById("popup");
@@ -19,10 +113,10 @@
           <li>I maintain an active lifestyle through sports and outdoor activities, including tennis, walking, running, and biking.</li>
         </ul>
       `;
-      imageHtml = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Tennis Photo">`;
+      imageHtml = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Prata">`;
     }
 
-    // EDUCATION & ACHIEVEMENTS (Resume)
+    // EDUCATION & ACHIEVEMENTS
     if (section === "education") {
       content = `
         <div class="resume">
@@ -53,8 +147,7 @@
           </ul>
         </div>
       `;
-      // FIXED: Add the actual resume image
-      imageHtml = `<img src="mshonorroll.jpg" class="resume-img" alt="Middle School Honor Roll">`;
+      imageHtml = `<img src="mshonorroll.jpg" alt="Middle School Honor Roll">`;
     }
 
     // SKILLS
@@ -116,4 +209,6 @@
   }
 
   window.addEventListener("load", () => createSnowfall(50));
-</script>
+  </script>
+</body>
+</html>
