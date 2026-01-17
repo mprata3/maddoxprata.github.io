@@ -118,6 +118,13 @@ body {
   border-radius: 10px;
 }
 
+/* Special rule ONLY for resume image */
+.slide-image img.resume-img {
+  object-fit: contain;
+  background-color: #eee;
+}
+
+
 /* =========================
    SECTIONS
    ========================= */
