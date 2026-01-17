@@ -18,15 +18,15 @@ function openPopup(section) {
         <li>I maintain an active lifestyle through sports and outdoor activities, including tennis, walking, running, and biking.</li>
       </ul>
     `;
-    // Tennis photo for About Me
     imageHtml = `<img src="rllygoodtennisphotoofmine.jpg" alt="Maddox Tennis Photo">`;
   }
 
-  // EDUCATION & ACHIEVEMENTS
+  // EDUCATION & ACHIEVEMENTS (RESUME)
   if (section === "education") {
     content = `
       <div class="resume">
         <h2>Resume</h2>
+
         <h3>Education</h3>
         <p>The Browning School | New York, NY</p>
         <p>Sophomore (10th Grade) expected to graduate in 2028</p>
@@ -53,7 +53,8 @@ function openPopup(section) {
         </ul>
       </div>
     `;
-    imageHtml = `<p>Image goes here</p>`; // optional placeholder
+    // ✅ NEW IMAGE FOR RESUME
+    imageHtml = `<img src="mshonorroll.jpg" alt="Middle School Honor Roll">`;
   }
 
   // SKILLS
@@ -69,11 +70,10 @@ function openPopup(section) {
         <li>Experience working in groups during a biodiversity project in the Bahamas</li>
       </ul>
     `;
-    // Bahamas photo for Skills
     imageHtml = `<img src="bahamasphoto.jpg" alt="Bahamas Project">`;
   }
 
-  // Additional fun ornament examples
+  // FUN ORNAMENTS (optional)
   if (section === "fun1") {
     content = `<h2>Fun Fact 1</h2><p>I love coding little interactive websites and experiments!</p>`;
     imageHtml = `<img src="fun1.jpg" alt="Fun Image 1">`;
@@ -84,7 +84,7 @@ function openPopup(section) {
     imageHtml = `<img src="fun2.jpg" alt="Fun Image 2">`;
   }
 
-  // Inject content and image into popup
+  // Inject content
   popupText.innerHTML = content;
   slideImage.innerHTML = imageHtml;
 
@@ -100,11 +100,9 @@ function openPopup(section) {
 function closePopup() {
   const popup = document.getElementById("popup");
 
-  // Smooth exit animation
   popup.classList.remove("fade-in");
   popup.classList.add("fade-out");
 
-  // Restore navbar after popup closes
   document.querySelector("nav").classList.remove("hidden");
 
   setTimeout(() => {
@@ -112,7 +110,7 @@ function closePopup() {
   }, 250);
 }
 
-// ===== SNOWFALL FOR CHRISTMAS TREE =====
+// ===== SNOWFALL =====
 function createSnowfall(num) {
   const tree = document.getElementById("tree");
 
@@ -120,13 +118,12 @@ function createSnowfall(num) {
     const snow = document.createElement("div");
     snow.classList.add("snowflake");
     snow.style.left = Math.random() * tree.offsetWidth + "px";
-    snow.style.fontSize = Math.random() * 12 + 8 + "px"; // 8px to 20px
-    snow.style.animationDuration = Math.random() * 5 + 5 + "s"; // 5s to 10s
-    snow.style.opacity = Math.random() * 0.5 + 0.9; // 0.5 to 1
-    snow.innerHTML = "❄"; // Snowflake emoji
+    snow.style.fontSize = Math.random() * 12 + 8 + "px";
+    snow.style.animationDuration = Math.random() * 5 + 5 + "s";
+    snow.style.opacity = Math.random() * 0.5 + 0.9;
+    snow.innerHTML = "❄";
     tree.appendChild(snow);
   }
 }
 
-// Trigger snowfall on page load
 window.addEventListener("load", () => createSnowfall(50));
