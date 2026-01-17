@@ -307,27 +307,25 @@ section {
   margin-right: 8px;
 }
 
-/* =========================
-   CONTACT SECTION
-   ========================= */
-#contact {
-  background-color: #ffe6e6;
-  padding: 120px 20px;
-  text-align: center;
-}
-
-#contact h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-#contact p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
+/* Contact buttons */
 .contact-links .btn {
-  margin: 0 10px 10px 10px;
+  display: inline-block;
+  padding: 15px 30px;      /* height & width of the button */
+  margin: 10px;            /* spacing between buttons */
+  background-color: #ff4d4d; /* red button */
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 20px;     /* rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-links .btn:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
 /* =========================
