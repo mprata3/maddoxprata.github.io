@@ -54,7 +54,7 @@ function openPopup(section) {
       </div>
     `;
     // NEW IMAGE FOR RESUME
-    imageHtml = `<img src="images/mshonorroll.jpg" alt="Middle School Honor Roll">`;
+    imageHtml = `<img src="mshonorroll.jpg" class="resume-img" alt="Middle School Honor Roll">`;
   }
 
   // SKILLS
