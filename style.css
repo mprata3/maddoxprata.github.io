@@ -180,14 +180,20 @@ section {
   box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
-/* Profile image */
-.welcome-image img {
-  width: 250px;
-  max-width: 80%;
-  border-radius: 15px;
-  margin-top: 40px;
-  box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+.welcome-image {
+  width: 250px;        /* controls overall size */
+  height: 250px;
+  margin: 20px auto;
+  overflow: hidden;    /* crops tall images */
+  border-radius: 20px; /* optional but looks clean */
 }
+
+.welcome-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crops instead of squishing */
+}
+
 
 /* =========================
    CHRISTMAS TREE
